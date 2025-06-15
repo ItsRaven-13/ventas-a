@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-export interface Product{
+export interface Product {
   id: number;
-  nombre:string;
+  nombre: string;
   descripcion: string;
   precio: number;
   imagen: string;
@@ -13,39 +13,38 @@ export interface Product{
 })
 
 export class Products {
-  
-  private products:Product[] = [
+
+  private products: Product[] = [
     {
       id: 1,
-      nombre: 'Honda Transa LP',
-      descripcion : 'Ideal para ciudad',
-      precio: 6500,
-      imagen: '/img/honda-transalp.jpg'
+      nombre: 'Corvette ZR1',
+      descripcion: 'Potente y elegante', precio: 184500,
+      imagen: '/img/CorvetteZR1.jpg'
     },
     {
       id: 2,
-      nombre: 'Kawasaky 600',
-      descripcion: 'Potente y elegante',
-      precio: 9200,
-      imagen: '/img/kawasaky 600.jpg'
+      nombre: 'Corvette Z06',
+      descripcion: 'Ideal para ciudad',
+      precio: 112500,
+      imagen: '/img/CorvetteZ06.jpg'
     },
     {
       id: 3,
-      nombre: 'Kawasaky KX 250',
-      descripcion: 'Moderna y económica',
-      precio: 3900,
-      imagen: '/img/kawasaky-kx250.jpg'
+      nombre: 'Silverado HD',
+      descripcion: 'Ideal para trabajo',
+      precio: 85000,
+      imagen: '/img/SilveradoHD.jpg'
     },
-   {
+    {
       id: 4,
-      nombre: 'Suzuki 1200',
-      descripcion: 'Moderna y económica',
-      precio: 13900,
-      imagen: '/img/suzuki-1200.jpg'
-   }
+      nombre: 'Suburban',
+      descripcion: 'Familiar y espaciosa',
+      precio: 75000,
+      imagen: '/img/Suburban.jpg'
+    }
   ]
-  constructor(){}
-  getProducts():Product[]{
+  constructor() { }
+  getProducts(): Product[] {
     return this.products;
   }
 }

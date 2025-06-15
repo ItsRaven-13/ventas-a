@@ -1,6 +1,7 @@
 header{
     background-color: black;
     padding: 20px;
+    font-size: 2em;
 }
 nav a{
     color: white;
@@ -13,3 +14,9 @@ nav a:hover{
     color: black;
     border-radius: 20px;
 }
+nav a.active{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+    
