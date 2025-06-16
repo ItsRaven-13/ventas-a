@@ -3,6 +3,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../../services/cart';
+
 
 // ¡RUTA DE IMPORTACIÓN CORREGIDA!
 // Debe apuntar a 'products/products.service', no directamente a 'products.service'
@@ -21,14 +23,18 @@ import { Product, ProductsService } from '../../services/products.service';
 export class Productos implements OnInit { // Tu clase se llama Productos
   productos : Product[] = [];
 
-  constructor(private productsService: ProductsService){
+  constructor(
+    private productsService: ProductsService,
+    private cartService: CartService){
     // La inicialización de datos va en ngOnInit
   }
 
   ngOnInit(): void {
-    // Asegúrate de que el nombre del método coincida con tu ProductsService.
-    // En mi última versión del servicio, el método es 'getAllProducts()'.
-    // Si en tu servicio sigue siendo 'getProducts()', cámbialo aquí.
+    
     this.productos = this.productsService.getAllProducts(); // <-- Usando getAllProducts() como en el servicio corregido
   }
+  agregarAlCarrito(producto: Product) {
+  this.cartService.addToCart(producto);
+  console.log('Producto agregado:', producto);
+}
 }

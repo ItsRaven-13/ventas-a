@@ -9,6 +9,7 @@
             <strong>{{producto.precio}}</strong>
             <br>
             <button [routerLink]="['/product-detail', producto.id]">Ver más</button>
+            <button (click)="agregarAlCarrito(producto)">Agregar al Carrito</button>
         </article>
     }
 </section>
